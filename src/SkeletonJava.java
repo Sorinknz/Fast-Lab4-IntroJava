@@ -40,6 +40,7 @@ public class SkeletonJava {
     public static void printGUI(double text) {
         JOptionPane.showMessageDialog(null, text);
     }
+
     // CONSOLE
     public static String readStringConsole(String label) {
         System.out.print(label);
@@ -70,37 +71,8 @@ public class SkeletonJava {
     public static void printConsole(double text) {
         System.out.println(text);
     }
+}
     /* end of utility methods*/
 
 
     /* here starts the main class */
-    public static void main(String[] arguments) {
-
-        int sum=0;
-        int[] note=new int [4];
-
-        for(int i=0;i<note.length;i++) {
-            note[i]=readIntGUI("introduceti nota");
-            sum+= note[i];
-        }
-        int media =sum/note.length;
-        System.out.println("media este:" +media);
-
-        int max = note[0];
-        for (int i=0; i< note.length;i++); {
-            if (note[i] > max); {
-                max = note [i];
-            }
-        } {
-        }
-
-
-
-    }
-
-
-    }
-
-    //end of main method
-
-// end of class
