@@ -1,3 +1,6 @@
+import javax.imageio.IIOException;
+import java.io.IOException;
+
 /**
  * Created by Sorin on 4/8/2016.
  */
@@ -5,25 +8,32 @@ public class orice extends SkeletonJava {
 
     public static void main(String[]args){
 
+        String user="soft";
+        String parola="123456";
 
-        //Sa se calculeze factorialul unui numar a
-        //factorialul = 1*2*3*...*a
+        //lansare notePad doar daca combinatia user-parola e corecta
 
-        int a = readIntGUI("Introdu numar:");
-        int rez=1;
-        int count=1;
-
+        boolean allowNotepad=false;
         do {
-            rez = rez * count;
-            count++;
-        }
+            String u = readStringGUI("user");
+            String p = readStringGUI("Pwd");
 
-        while (count<=a);
-        {
-            printGUI("Factorialul este:" + rez);
+            if (user.equals(u) && parola.matches(p)) {
+                allowNotepad = true;
+            }
         }
+            while (!allowNotepad) ;
+            lansareNotepad ();
+        }
+    public static void lansareNotepad(){
+        System.out.println("lansare");
+        try {
+            Runtime.getRuntime().exec("1s");
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
+}
 
 
 
